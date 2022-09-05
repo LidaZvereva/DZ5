@@ -67,39 +67,79 @@
 // Задача 37: Найдите произведение пар чисел в одномерном массиве. 
 // Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
 
-int [] EnterRandomArray()
-{  
-    Console.WriteLine("Введите размер массива");
-    int arraySize=Convert.ToInt32(Console.ReadLine());
-    int []array= new int [arraySize];
+// int [] EnterRandomArray()
+// {  
+//     Console.WriteLine("Введите размер массива");
+//     int arraySize=Convert.ToInt32(Console.ReadLine());
+//     int []array= new int [arraySize];
     
-    for (int i=0; i<array.Length; i++)
-    {
-        array[i]=new Random().Next(-100,100);
+//     for (int i=0; i<array.Length; i++)
+//     {
+//         array[i]=new Random().Next(-100,100);
        
-    }
-    System.Console.WriteLine(String.Join(",",array));
-    return array;
+//     }
+//     System.Console.WriteLine(String.Join(",",array));
+//     return array;
 
-}
+// }
 
-void PeriodOfPairs(int [] array)
-{
-    int Pair=0;
+// void PeriodOfPairs(int [] array)
+// {
+//     int Pair=0;
     
-    int array2Size=(array.Length)/2;
-    int []array2=new int [array2Size];
-    int j=0;
+//     int array2Size=(array.Length)/2;
+//     int []array2=new int [array2Size];
+//     int j=0;
     
-    for (int y=0;y<array2.Length;y++)
-    {
-            Pair=array[j]*array[array.Length-1-j];
-            array2[y]=Pair;
-            j++;
-    }
-    Console.WriteLine("Новый массив ");
-    Console.WriteLine(String.Join(",",array2));
+//     for (int y=0;y<array2.Length;y++)
+//     {
+//             Pair=array[j]*array[array.Length-1-j];
+//             array2[y]=Pair;
+//             j++;
+//     }
+//     Console.WriteLine("Новый массив ");
+//     Console.WriteLine(String.Join(",",array2));
     
-}
- PeriodOfPairs(EnterRandomArray());
+// }
+//  PeriodOfPairs(EnterRandomArray());
 
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+// double [] EnterRandomArray()
+// {  
+//     Console.WriteLine("Введите размер массива");
+//     int arraySize=Convert.ToInt32(Console.ReadLine());
+//     double []array= new double [arraySize];
+    
+//     for (int i=0; i<array.Length; i++)
+//     {
+//         array[i]=new Random().Next(-5,15);
+//     }
+//     System.Console.WriteLine("Массив:");
+//     System.Console.WriteLine(String.Join(",",array));
+    
+//     return array;
+//     }
+
+// void SumOfMinAndMax(double [] array)
+// {
+//     int max=0;
+//     int min=0;
+//     double SumMinMAx=0;
+//     for (int j=0; j<array.Length; j++)
+//     {       
+//         {
+//             if(array[j]>array[max]) max=j;
+//         }
+        
+//         {
+//             if(array[j]<array[min]) min=j;
+//         }
+
+//     }
+//     SumMinMAx=array[max]-array[min];
+   
+//     System.Console.WriteLine($"Разница элементов {SumMinMAx}");
+// }
+
+// SumOfMinAndMax(EnterRandomArray());
